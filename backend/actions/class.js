@@ -6,7 +6,7 @@ import {
     createClass,
     updateClass,
     deleteClass
-} from '@/lib/repo/class.js';
+} from '../../repo/class';
 
 import { revalidatePath } from 'next/cache';
 
@@ -31,7 +31,7 @@ export async function fetchClasses(searchParams) {
     }
 }
 
-export async function fetchClassDetails(id) {
+export async function fetchClassInfo(id) {
     try {
         const classData = await getClassById(id);
         return classData;
@@ -52,10 +52,11 @@ export async function updateClassInfo(formData) {
     }
 }
 
-export async function deleteClassInfo(id) {
+export async function removeClass(formData) {
+      
     try {
-        await deleteClass(id);
-        revalidatePath('/classes');
+        await deleteClass(formData.id);
+        revalidatePath('/classs');
     } catch (error) {
         console.error('Error deleting class:', error);
         throw error;

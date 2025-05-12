@@ -1,63 +1,64 @@
 'use server'
-import { 
-  getAllInstructors, 
-  getInstructorById, 
-  createInstructor, 
-  updateInstructor, 
-  deleteInstructor 
-} from '@/lib/repo/instructor.js'; 
+
+import {
+    getAllCourses,
+    getCourseById,
+    createCourse,
+    updateCourse,
+    deleteCourse
+} from '../../repo/course';
 
 import { revalidatePath } from 'next/cache';
-import { getAllCourses } from '@/lib/repo/course.js';
 
-export async function addInstructor(formData) {
+export async function addCourse(formData) {
     try {
-        const instructor = await createInstructor(formData);
-        revalidatePath('/instructors');
-        return instructor;
+        const course = await createCourse(formData);
+        revalidatePath('/courses');
+        return course;
     } catch (error) {
-        console.error('Error creating instructor:', error);
+        console.error('Error creating course:', error);
         throw error;
     }
 }
 
-export async function fetchInstructors(searchParams) {
+export async function fetchCourses(searchParams) {
     try {
-        const instructors = await getAllInstructors(searchParams);
-        return instructors;
+        const courses = await getAllCourses(searchParams);
+        return courses;
     } catch (error) {
-        console.error('Error fetching instructors:', error);
-        throw error;
-    }
-}  
-
-export async function fetchInstructorDetails(id) {
-    try {
-        const instructor = await getInstructorById(id);
-        return instructor;
-    } catch (error) {
-        console.error('Error fetching instructor details:', error);
+        console.error('Error fetching courses:', error);
         throw error;
     }
 }
 
-export async function updateInstructorInfo(formData) {
+export async function fetchCourseInfo(id) {
     try {
-        const instructor = await updateInstructor(formData.id, formData);
-        revalidatePath(`/instructors/${formData.id}`);
-        return instructor;
+        const course = await getCourseById(id);
+        return course;
     } catch (error) {
-        console.error('Error updating instructor:', error);
+        console.error('Error fetching course details:', error);
         throw error;
     }
 }
 
-export async function deleteInstructorInfo(id) {
+export async function updateCourseInfo(formData) {
     try {
-        await deleteInstructor(id);
-        revalidatePath('/instructors');
+        const course = await updateCourse(formData.id, formData);
+        revalidatePath(`/courses/${formData.id}`);
+        return course;
     } catch (error) {
-        console.error('Error deleting instructor:', error);
+        console.error('Error updating course:', error);
+        throw error;
+    }
+}
+
+export async function removeCourse(formData) {
+      
+    try {
+        await deleteCourse(formData.id);
+        revalidatePath('/courses');
+    } catch (error) {
+        console.error('Error deleting course:', error);
         throw error;
     }
 }

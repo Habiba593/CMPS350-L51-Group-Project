@@ -6,10 +6,9 @@ import {
   createInstructor, 
   updateInstructor, 
   deleteInstructor 
-} from '@/lib/repo/instructor.js';
+} from '../../repo/instructor';
 
 import { revalidatePath } from 'next/cache';
-import { getAllCourses } from '@/lib/repo/course.js';   
 
 export async function addInstructor(formData) {
     try {
@@ -32,7 +31,7 @@ export async function fetchInstructors(searchParams) {
     }
 }
 
-export async function fetchInstructorDetails(id) {
+export async function fetchInstructorInfo(id) {
     try {
         const instructor = await getInstructorById(id);
         return instructor;
@@ -53,9 +52,10 @@ export async function updateInstructorInfo(formData) {
     }
 }
 
-export async function deleteInstructorInfo(id) {
+export async function removeInstructor(formData) {
+      
     try {
-        await deleteInstructor(id);
+        await deleteInstructor(formData.id);
         revalidatePath('/instructors');
     } catch (error) {
         console.error('Error deleting instructor:', error);

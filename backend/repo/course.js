@@ -80,9 +80,3 @@ export async function getCourseByName(name) {
     });
 }
 
-export async function getCourseByYear(year) {
-    return prisma.course.findUnique({
-        where: { year }
-    });
-}
-

@@ -71,3 +71,8 @@ export async function deleteClass(id) {
     });
 }
 
+export async function getClassByName(name) {
+    return prisma.class.findUnique({
+        where: { name }
+    });
+}

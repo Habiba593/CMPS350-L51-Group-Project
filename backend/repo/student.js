@@ -78,16 +78,8 @@ export async function deleteStudent(id) {
 }
 
 
-export async function getStudentsByCourse(courseId) {
-    return prisma.student.findMany({
-        where: {
-        enrollments: {
-            some: {
-            class: {
-                courseId
-            }
-            }
-        }
-        }
+export async function getStudentByName(name) {
+    return prisma.student.findUnique({
+        where: { name }
     });
 }
