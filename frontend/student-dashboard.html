@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses</title>
+    <title>Student Dashboard - QU Student Management</title>
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/common.js"></script>
     <script src="./js/studentScript.js"></script>
@@ -26,7 +26,7 @@
             <h2>Available Courses</h2>
             <div class="search-container">
                 <div class="search-group">
-                    <input type="text" id="courseSearch" placeholder="Search by course name...">
+                    <input type="text" id="courseSearch" placeholder="Search by course name or ID...">
                 </div>
                 <div class="filter-group">
                     <select id="categoryFilter">
@@ -40,11 +40,14 @@
                         <option value="Networking">Networking</option>
                         <option value="Cybersecurity">Cybersecurity</option>
                         <option value="Systems">Systems</option>
+                        <option value="Artificial Intelligence">Artificial Intelligence</option>
+                        <option value="Multimedia">Multimedia</option>
                     </select>
                 </div>
             </div>
             <div id="courseList" class="course-list">
                 <!-- Courses will be loaded here -->
+                <div class="loading" id="coursesLoading"></div>
             </div>
         </section>
     </main>
@@ -57,6 +60,7 @@
             <p id="courseDescription"></p>
             <div id="instructorList" class="instructor-list">
                 <!-- Instructors will be loaded here -->
+                <div class="loading" id="instructorsLoading"></div>
             </div>
             <div id="registrationMessage"></div>
         </div>

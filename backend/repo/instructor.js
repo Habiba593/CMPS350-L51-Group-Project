@@ -79,8 +79,16 @@ export async function deleteInstructor(id) {
     });
 }
 
-export async function getInstructorByName(name) {
-    return prisma.instructor.findUnique({
-        where: { name }
+export async function getInstructorsByCourse(courseId) {
+    return prisma.instructor.findMany({
+        where: {
+        enrollments: {
+            some: {
+            class: {
+                courseId
+            }
+            }
+        }
+        }
     });
 }

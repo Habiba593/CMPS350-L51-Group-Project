@@ -6,7 +6,7 @@ import {
   createStudent, 
   updateStudent, 
   deleteStudent 
-} from '../../repo/student';
+} from '@/lib/repo/student.js';
 
 import { revalidatePath } from 'next/cache';
 
@@ -34,7 +34,7 @@ export async function fetchStudents(searchParams) {
     }
 }
 
-export async function fetchStudentInfo(id) {
+export async function fetchStudentDetails(id) {
       
     try {
         const student = await getStudentById(id);
@@ -66,6 +66,19 @@ export async function removeStudent(formData) {
         revalidatePath('/students');
     } catch (error) {
         console.error('Error deleting student:', error);
+        throw error;
+    }
+}
+
+
+export async function changeStudentYear(formData) {
+      
+    try {
+        const student = await updateStudent(formData.id, { year: formData.year });
+        revalidatePath(`/students/${formData.id}`);
+        return student;
+    } catch (error) {
+        console.error('Error changing student year:', error);
         throw error;
     }
 }

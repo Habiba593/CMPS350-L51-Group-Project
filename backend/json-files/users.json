@@ -1,106 +1,220 @@
 [
-    {
-      "id": "s1001",
-      "username": "student1",
-      "password": "pass123",
-      "userType": "student",
-      "name": "Sara Ali",
-      "completedCourses": [
-        {"courseId": "CMPS101", "grade": "A"}
-      ]
-    },
-    {
-        "id": "s1002",
-        "username": "student2",
-        "password": "pass123",
-        "userType": "student",
-        "name": "Fatima Ahmed",
-        "completedCourses": [
-          {"courseId": "CMPS101", "grade": "A"},
-          {"courseId": "CMPS151", "grade": "B+"}
-        ]
-    },
-    {
-        "id": "s1003",
-        "username": "student3",
-        "password": "pass123",
-        "userType": "student",
-        "name": "Alaa Hasan",
-        "completedCourses": [
-          {"courseId": "CMPS151", "grade": "B+"},
-          {"courseId": "CMPS251", "grade": "C+"}
-        ]
-    },
-    {
-        "id": "s1004",
-        "username": "student4",
-        "password": "pass123",
-        "userType": "student",
-        "name": "Noora Hamad",
-        "completedCourses": [
-            {"courseId": "CMPS151", "grade": "B"},
-            {"courseId": "CMPS251", "grade": "A"},
-            {"courseId": "CMPS303", "grade": "B"}
-        ]
-    },
-    {
-        "id": "s1005",
-        "username": "student5",
-        "password": "pass123",
-        "userType": "student",
-        "name": "Reem Mahmoud",
-        "completedCourses": [
-            {"courseId": "CMPS151", "grade": "A"},
-            {"courseId": "CMPS251", "grade": "B"},
-            {"courseId": "CMPS303", "grade": "C"},
-            {"courseId": "CMPS310", "grade": "C+"}
-        ]
-    },
-    {
-        "id": "s1006",
-        "username": "student6",
-        "password": "pass123",
-        "userType": "student",
-        "name": "Mai Khalid",
-        "completedCourses": [
-            {"courseId": "CMPS151", "grade": "A"},
-            {"courseId": "CMPS251", "grade": "B"},
-            {"courseId": "CMPS303", "grade": "C"},
-            {"courseId": "CMPS351", "grade": "C"},
-            {"courseId": "CMPS310", "grade": "B"}
-        ]
-    },
+  {
+    "id": "s1001",
+    "username": "student1",
+    "password": "pass123",
+    "userType": "student",
+    "name": "Sara Ali",
+    "completedCourses": [
+      {"courseId": "CMPS101", "grade": "A"}
+    ],
+    "inProgressCourses": [
+      {"courseId": "CMPS151", "classId": "CLS151", "status": "active"}
+    ]
+  },
+  {
+    "id": "s1002",
+    "username": "student2",
+    "password": "pass123",
+    "userType": "student",
+    "name": "Fatima Ahmed",
+    "completedCourses": [
+      {"courseId": "CMPS101", "grade": "A"},
+      {"courseId": "CMPS151", "grade": "B+"}
+    ],
+    "inProgressCourses": [
+      {"courseId": "CMPS251", "classId": "CLS251", "status": "active"}
+    ]
+  },
+  {
+    "id": "s1003",
+    "username": "student3",
+    "password": "pass123",
+    "userType": "student",
+    "name": "Alaa Hasan",
+    "completedCourses": [
+      {"courseId": "CMPS151", "grade": "B+"},
+      {"courseId": "CMPS251", "grade": "C+"}
+    ],
+    "inProgressCourses": [
+      {"courseId": "CMPS303", "classId": "CLS303", "status": "active"}
+    ]
+  },
+  {
+    "id": "s1004",
+    "username": "student4",
+    "password": "pass123",
+    "userType": "student",
+    "name": "Noora Hamad",
+    "completedCourses": [
+      {"courseId": "CMPS151", "grade": "B"},
+      {"courseId": "CMPS251", "grade": "A"},
+      {"courseId": "CMPS303", "grade": "B"}
+    ],
+    "inProgressCourses": [
+      {"courseId": "CMPS310", "classId": "CLS310", "status": "active"}
+    ]
+  },
+  {
+    "id": "s1005",
+    "username": "student5",
+    "password": "pass123",
+    "userType": "student",
+    "name": "Reem Mahmoud",
+    "completedCourses": [
+      {"courseId": "CMPS151", "grade": "A"},
+      {"courseId": "CMPS251", "grade": "B"},
+      {"courseId": "CMPS303", "grade": "C"},
+      {"courseId": "CMPS310", "grade": "C+"}
+    ],
+    "inProgressCourses": [
+      {"courseId": "CMPS351", "classId": "CLS351", "status": "active"}
+    ]
+  },
+  {
+    "id": "s1006",
+    "username": "student6",
+    "password": "pass123",
+    "userType": "student",
+    "name": "Mai Khalid",
+    "completedCourses": [
+      {"courseId": "CMPS151", "grade": "A"},
+      {"courseId": "CMPS251", "grade": "B"},
+      {"courseId": "CMPS303", "grade": "C"},
+      {"courseId": "CMPS351", "grade": "C"},
+      {"courseId": "CMPS310", "grade": "B"}
+    ],
+    "inProgressCourses": [
+      {"courseId": "CMPS355", "classId": "CLS355", "status": "active"}
+    ]
+  },
+  {
+    "id": "s1007",
+    "username": "student7",
+    "password": "pass123",
+    "userType": "student",
+    "name": "Ahmed Hassan",
+    "completedCourses": [
+      {"courseId": "CMPS101", "grade": "A-"},
+      {"courseId": "CMPS151", "grade": "B"}
+    ],
+    "inProgressCourses": [
+      {"courseId": "CMPS251", "classId": "CLS251", "status": "active"}
+    ]
+  },
+  {
+    "id": "s1008",
+    "username": "student8",
+    "password": "pass123",
+    "userType": "student",
+    "name": "Yousef Al-Malki",
+    "completedCourses": [
+      {"courseId": "CMPS101", "grade": "B+"},
+      {"courseId": "CMPS151", "grade": "A-"}
+    ],
+    "inProgressCourses": [
+      {"courseId": "CMPS251", "classId": "CLS251", "status": "active"}
+    ]
+  },
+  {
+    "id": "s1009",
+    "username": "student9",
+    "password": "pass123",
+    "userType": "student",
+    "name": "Maryam Al-Sulaiti",
+    "completedCourses": [
+      {"courseId": "CMPS101", "grade": "A+"},
+      {"courseId": "CMPS151", "grade": "A"},
+      {"courseId": "CMPS251", "grade": "A-"}
+    ],
+    "inProgressCourses": [
+      {"courseId": "CMPS303", "classId": "CLS303", "status": "active"},
+      {"courseId": "CMPS351", "classId": "CLS351", "status": "active"}
+    ]
+  },
+  {
+    "id": "s1010",
+    "username": "student10",
+    "password": "pass123",
+    "userType": "student",
+    "name": "Hamad Al-Thani",
+    "completedCourses": [
+      {"courseId": "CMPS101", "grade": "B"},
+      {"courseId": "CMPS151", "grade": "B+"}
+    ],
+    "inProgressCourses": [
+      {"courseId": "CMPS251", "classId": "CLS251", "status": "active"}
+    ]
+  },
 
-    {
-      "id": "i2001",
-      "username": "instructor1",
-      "password": "pass123",
-      "userType": "instructor",
-      "name": "Dr. Mahmoud Barhamgi",
-      "expertiseAreas": ["Web Development", "Databases"]
-    },
-    {
-        "id": "i2002",
-        "username": "instructor2",
-        "password": "pass123",
-        "userType": "instructor",
-        "name": "Dr. Khaled Khan",
-        "expertiseAreas": ["Networks", "Cybersecurity"]
-    },
-    {
-        "id": "i2003",
-        "username": "instructor3",
-        "password": "pass123",
-        "userType": "instructor",
-        "name": "Dr. Mohamed Ahmed",
-        "expertiseAreas": ["software eng", "AI"]
-    },
+  {
+    "id": "i2001",
+    "username": "instructor1",
+    "password": "pass123",
+    "userType": "instructor",
+    "name": "Dr. Mahmoud Barhamgi",
+    "expertiseAreas": ["Web Development", "Databases"],
+    "teachingCourses": ["CMPS101", "CMPS351", "CMPS350"]
+  },
+  {
+    "id": "i2002",
+    "username": "instructor2",
+    "password": "pass123",
+    "userType": "instructor",
+    "name": "Dr. Khaled Khan",
+    "expertiseAreas": ["Networks", "Cybersecurity"],
+    "teachingCourses": ["CMPS303", "CMPS355", "CMPS385"]
+  },
+  {
+    "id": "i2003",
+    "username": "instructor3",
+    "password": "pass123",
+    "userType": "instructor",
+    "name": "Dr. Mohamed Ahmed",
+    "expertiseAreas": ["Software Engineering", "AI"],
+    "teachingCourses": ["CMPS151", "CMPS251", "CMPS310"]
+  },
+  {
+    "id": "i2004",
+    "username": "instructor4",
+    "password": "pass123",
+    "userType": "instructor",
+    "name": "Dr. Sarra Alqahtani",
+    "expertiseAreas": ["Distributed Systems", "Cloud Computing"],
+    "teachingCourses": ["CMPS405", "CMPS303"]
+  },
+  {
+    "id": "i2005",
+    "username": "instructor5",
+    "password": "pass123",
+    "userType": "instructor",
+    "name": "Dr. Noora Al-Emadi",
+    "expertiseAreas": ["Mobile Development", "Human-Computer Interaction"],
+    "teachingCourses": ["CMPS101", "CMPS350"]
+  },
 
-    {
-      "id": "a3001",
-      "username": "admin1",
-      "password": "pass123",
-      "userType": "administrator",
-      "name": "Prof. Amr Mohamed"
-    }
-  ]
+  {
+    "id": "a3001",
+    "username": "admin1",
+    "password": "pass123",
+    "userType": "administrator",
+    "name": "Prof. Amr Mohamed",
+    "role": "Department Head"
+  },
+  {
+    "id": "a3002",
+    "username": "admin2",
+    "password": "pass123",
+    "userType": "administrator",
+    "name": "Dr. Sumaya Al-Maadeed",
+    "role": "Academic Affairs Manager"
+  },
+  {
+    "id": "a3003",
+    "username": "admin3",
+    "password": "pass123",
+    "userType": "administrator",
+    "name": "Dr. Abdulaziz Al-Ali",
+    "role": "Program Coordinator"
+  }
+]

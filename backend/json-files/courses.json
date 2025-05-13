@@ -6,7 +6,7 @@
     "credits": 3,
     "prerequisites": [],
     "isOpenForRegistration": true,
-    "description": "Basic concepts of computer systems..."
+    "description": "Basic concepts of computer systems, including hardware, software, and information processing. Introduction to problem-solving techniques and algorithms using high-level programming languages."
   },
   {
     "id": "CMPS151",
@@ -15,7 +15,7 @@
     "credits": 3,
     "prerequisites": [],
     "isOpenForRegistration": true,
-    "description": "Introduction to programming concepts..."
+    "description": "Introduction to programming concepts using a high-level language. Topics include data types, control structures, functions, arrays, and an introduction to object-oriented programming."
   },
   {
     "id": "CMPS251",
@@ -24,7 +24,7 @@
     "credits": 4,
     "prerequisites": ["CMPS151"],
     "isOpenForRegistration": true,
-    "description": "Object-oriented design and implementation..."
+    "description": "Object-oriented design and implementation using a modern OOP language. Topics include classes, inheritance, polymorphism, interfaces, and exception handling."
   },
   {
     "id": "CMPS303",
@@ -33,7 +33,7 @@
     "credits": 4,
     "prerequisites": ["CMPS251"],
     "isOpenForRegistration": true,
-    "description": "Basic data structures and algorithms..."
+    "description": "Basic data structures and algorithms including lists, stacks, queues, trees, and graphs. Sorting and searching algorithms. Algorithm analysis and complexity theory."
   },
   {
     "id": "CMPS310",
@@ -42,7 +42,7 @@
     "credits": 4,
     "prerequisites": ["CMPS251"],
     "isOpenForRegistration": true,
-    "description": "Software development lifecycle..."
+    "description": "Software development lifecycle: requirements, design, implementation, testing, and maintenance. Project management, documentation, and software quality assurance."
   },
   {
     "id": "CMPS350",
@@ -51,7 +51,7 @@
     "credits": 3,
     "prerequisites": ["CMPS251"],
     "isOpenForRegistration": true,
-    "description": "Web frontend/backend development..."
+    "description": "Web frontend/backend development including HTML, CSS, JavaScript, server-side programming, and database connectivity. Web application architecture and frameworks."
   },
   {
     "id": "CMPS351",
@@ -60,16 +60,34 @@
     "credits": 4,
     "prerequisites": ["CMPS251"],
     "isOpenForRegistration": true,
-    "description": "Introduction to database concepts..."
+    "description": "Introduction to database concepts, data models, relational database design, normalization, SQL, and database application development. Overview of modern database systems."
   },
   {
     "id": "CMPS355",
-    "name": "Data Communication & Networks1",
+    "name": "Data Communication & Networks 1",
     "category": "Networking",
     "credits": 4,
     "prerequisites": ["CMPS303"],
     "isOpenForRegistration": true,
-    "description": "Concepts and principles underlying data communication networks..."
+    "description": "Concepts and principles underlying data communication networks. Network architectures, protocols, routing, and network security fundamentals."
+  },
+  {
+    "id": "CMPS360",
+    "name": "Computer Architecture",
+    "category": "Systems",
+    "credits": 3,
+    "prerequisites": ["CMPS101"],
+    "isOpenForRegistration": true,
+    "description": "Fundamentals of computer organization and architecture. Topics include digital logic, CPU design, instruction sets, memory hierarchy, and I/O systems."
+  },
+  {
+    "id": "CMPS370",
+    "name": "Mobile App Development",
+    "category": "Programming",
+    "credits": 3,
+    "prerequisites": ["CMPS251"],
+    "isOpenForRegistration": true,
+    "description": "Development of mobile applications for Android and iOS platforms. Topics include mobile user interfaces, data storage, sensors, and publishing applications."
   },
   {
     "id": "CMPS385",
@@ -78,7 +96,7 @@
     "credits": 3,
     "prerequisites": ["CMPS355"],
     "isOpenForRegistration": false,
-    "description": "Fundamentals of information security..."
+    "description": "Fundamentals of information security. Topics include cryptography, access control, network security, application security, and security management."
   },
   {
     "id": "CMPS405",
@@ -87,6 +105,33 @@
     "credits": 4,
     "prerequisites": ["CMPS303", "CMPS351"],
     "isOpenForRegistration": false,
-    "description": "Fundamental concepts of operating system design and implementation..."
+    "description": "Fundamental concepts of operating system design and implementation. Process management, memory management, file systems, and device management."
+  },
+  {
+    "id": "CMPS410",
+    "name": "Cloud Computing",
+    "category": "Systems",
+    "credits": 3,
+    "prerequisites": ["CMPS355", "CMPS351"],
+    "isOpenForRegistration": false,
+    "description": "Introduction to cloud computing concepts, architectures, and services. Topics include virtualization, containerization, and deployment of applications in cloud environments."
+  },
+  {
+    "id": "CMPS420",
+    "name": "Machine Learning",
+    "category": "Artificial Intelligence",
+    "credits": 4,
+    "prerequisites": ["CMPS303"],
+    "isOpenForRegistration": false,
+    "description": "Fundamentals of machine learning algorithms, including supervised and unsupervised learning, neural networks, and deep learning approaches."
+  },
+  {
+    "id": "CMPS430",
+    "name": "Digital Image Processing",
+    "category": "Multimedia",
+    "credits": 3,
+    "prerequisites": ["CMPS303"],
+    "isOpenForRegistration": false,
+    "description": "Basic concepts and techniques in digital image processing. Topics include image enhancement, restoration, compression, and analysis."
   }
 ]
